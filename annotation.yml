@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: anno-pod
+  labels:
+    env: prod
+  namespace: prod
+  annotations:
+    myownapp: "543726285752.dkr.ecr.ap-south-1.amazonaws.com/image_push"
+    sonarurl: "https://sonar.io/project-key: enable"
+spec:
+  containers:
+    - name: anno-co
+      image: jenkins/jenkins
