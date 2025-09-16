@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pay-app2
+  labels:
+    ENV: DEV-pay2
+spec:
+  restartPolicy: OnFailure
+  containers:
+    - name: pay2
+      image: busybox
+      command: ["sh", "-c", "exit 0"]
+  
